@@ -1,4 +1,4 @@
-FROM ghcr.io/ublue-os/config:latest@sha256:f136ef45a6fb050d6abeb1541e6e0e00ac5962c2ed78b3aeda20030d85c8ce10 AS config
+FROM ghcr.io/ublue-os/config:latest@sha256:8de7de1b13ad1706e17bd4e80c9236a4b857134cc6206b353c01b559a8d4da74 AS config
 FROM ghcr.io/centos-workstation/main:${MAJOR_VERSION:-latest}
 
 ARG IMAGE_NAME="${IMAGE_NAME:-achillobator}"
