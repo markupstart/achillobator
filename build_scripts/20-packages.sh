@@ -44,7 +44,10 @@ dnf -y --enablerepo copr:copr.fedorainfracloud.org:ublue-os:staging install \
 
 dnf -y --enablerepo "copr:copr.fedorainfracloud.org:ublue-os:staging" install uupd &&
 	dnf -y install systemd-container
-dnf -y --enablerepo "https://copr.fedorainfracloud.org/coprs/yalter/niri-git/repo/epel-${MAJOR_VERSION}/yalter-niri-git-epel-${MAJOR_VERSION}.repo" install niri
+dnf config-manager --add-repo "https://copr.fedorainfracloud.org/coprs/yalter/niri-git/repo/epel-${MAJOR_VERSION}/yalter-niri-git-epel-${MAJOR_VERSION}.repo"
+dnf config-manager --set-disabled copr:copr.fedorainfracloud.org:yalter:niri-git
+dnf -y --enablerepo copr:copr.fedorainfracloud.org:yalter:niri-git install \
+	niri
 dnf -y --enablerepo "copr:copr.fedorainfracloud.org:ublue-os:staging" install ublue-setup-services &&
 	systemctl enable check-sb-key.service
 
