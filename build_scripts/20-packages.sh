@@ -64,6 +64,12 @@ dnf config-manager --set-disabled copr:copr.fedorainfracloud.org:che:nerd-fonts
 dnf -y --enablerepo copr:copr.fedorainfracloud.org:che:nerd-fonts install \
 	nerd-fonts
 
+dnf config-manager --add-repo "https://copr.fedorainfracloud.org/coprs/markupstart/xwayland-satellite//repo/epel-${MAJOR_VERSION}/markupstart-xwayland-satellite-epel-${MAJOR_VERSION}.repo"
+dnf config-manager --set-disabled copr:copr.fedorainfracloud.org:markupstart:xwayland-satellite
+dnf -y --enablerepo copr:copr.fedorainfracloud.org:markupstart:xwayland-satellite install \
+	xwayland-satellite
+ 
+
 # This is required so homebrew works indefinitely.
 # Symlinking it makes it so whenever another GCC version gets released it will break if the user has updated it without-
 # the homebrew package getting updated through our builds.
