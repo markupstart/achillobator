@@ -1,3 +1,3 @@
 # Bluefin LTS (Alpha)
-Added Niri to the image.
+Added Niri and xwayland-satellite to the image.
 
