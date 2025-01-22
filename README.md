@@ -1,3 +1,3 @@
 # Bluefin LTS (Alpha)
-Added Niri, xwayland-satellite, swabg, swayidle and swaylock to the image.
+Added Niri, xwayland-satellite, swaybg, swayidle and swaylock to the image.
 
