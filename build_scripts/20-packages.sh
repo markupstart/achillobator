@@ -69,7 +69,13 @@ dnf config-manager --set-disabled copr:copr.fedorainfracloud.org:markupstart:xwa
 dnf -y --enablerepo copr:copr.fedorainfracloud.org:markupstart:xwayland-satellite install \
 	xwayland-satellite
  
-
+dnf config-manager --add-repo "https://copr.fedorainfracloud.org/coprs/markupstart/sway//repo/epel-${MAJOR_VERSION}/markupstart-sway-epel-${MAJOR_VERSION}.repo"
+dnf config-manager --set-disabled copr:copr.fedorainfracloud.org:markupstart:sway
+dnf -y --enablerepo copr:copr.fedorainfracloud.org:markupstart:sway install \
+	swaybg \
+ 	swaylock \
+  	swayidle
+ 
 # This is required so homebrew works indefinitely.
 # Symlinking it makes it so whenever another GCC version gets released it will break if the user has updated it without-
 # the homebrew package getting updated through our builds.
