@@ -75,7 +75,8 @@ dnf config-manager --set-disabled copr:copr.fedorainfracloud.org:markupstart:swa
 dnf -y --enablerepo copr:copr.fedorainfracloud.org:markupstart:sway install \
 	swaybg \
  	swaylock \
-  	swayidle
+  	swayidle \
+        mako
  
 # This is required so homebrew works indefinitely.
 # Symlinking it makes it so whenever another GCC version gets released it will break if the user has updated it without-
