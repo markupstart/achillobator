@@ -73,6 +73,9 @@ dnf -y --enablerepo copr:copr.fedorainfracloud.org:markupstart:xwayland-satellit
 dnf config-manager --add-repo "https://copr.fedorainfracloud.org/coprs/markupstart/sway//repo/epel-${MAJOR_VERSION}/markupstart-sway-epel-${MAJOR_VERSION}.repo"
 dnf config-manager --set-disabled copr:copr.fedorainfracloud.org:markupstart:sway
 dnf -y --enablerepo copr:copr.fedorainfracloud.org:markupstart:sway install \
+        python3-i3ipc \
+	wlr-randr \
+        gtk-layer-shell \
 	swaybg \
  	swaylock \
   	swayidle \
