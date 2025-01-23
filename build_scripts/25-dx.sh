@@ -4,6 +4,8 @@ set -xeuo pipefail
 
 # This is for better testing, we might split this later
 
+dnf install -y fuse flatpak-builder
+
 # VSCode on the base image!
 dnf config-manager --add-repo "https://packages.microsoft.com/yumrepos/vscode"
 dnf config-manager --set-disabled packages.microsoft.com_yumrepos_vscode
