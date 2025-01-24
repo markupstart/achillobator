@@ -7,15 +7,17 @@ MAJOR_VERSION="$(sh -c '. /usr/lib/os-release ; echo $VERSION_ID')"
 dnf -y remove \
 	subscription-manager
 
+
 dnf -y install \
 	-x gnome-extensions-app \
-	gnome-shell-extension-{appindicator,dash-to-dock,blur-my-shell} \
 	distrobox \
-	tuned-ppd \
-	fpaste \
-	distribution-gpg-keys \
-	fastfetch \
-	just
+ 	distribution-gpg-keys \
+  	fastfetch \
+   	fpaste \
+ 	gnome-shell-extension-{appindicator,dash-to-dock,blur-my-shell} \
+  	just \
+   	powertop \
+	tuned-ppd
 
 # Everything that depends on external repositories should be after this.
 # Make sure to set them as disabled and enable them only when you are going to use their packages.
