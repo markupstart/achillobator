@@ -5,6 +5,7 @@ set -xeuo pipefail
 MAJOR_VERSION="$(sh -c '. /usr/lib/os-release ; echo $VERSION_ID')"
 
 dnf -y remove \
+        setroubleshoot \
 	subscription-manager
 
 
